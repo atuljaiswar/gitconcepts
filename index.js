@@ -1,7 +1,14 @@
 const throttle = (cb, delay) => {
   let timer = null;
+  let throttle = false;
   return () => {
-    timer = setTimeout(cb, delay);
+    if (!throttle) {
+      cb();
+      throttle = true;
+      timer = setTimeout(() => {
+        throttle = false;
+      }, delay);
+    }
   };
 };
 const handleScroll = () => {
