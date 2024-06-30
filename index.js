@@ -15,5 +15,6 @@ const throttle = (cb, delay) => {
 const handleScroll = () => {
   console.log('HIITED');
 };
+//testing
 const throttleVersion = throttle(handleScroll, 1000);
 document.addEventListener('scroll', throttleVersion);
