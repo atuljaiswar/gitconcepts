@@ -6,6 +6,7 @@ const throttle = (cb, delay) => {
     if (!throttle) {
       cb();
       throttle = true;
+      // this will make to call after 1 sec
       timer = setTimeout(() => {
         throttle = false;
       }, delay);
