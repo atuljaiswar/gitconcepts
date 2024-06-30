@@ -1,5 +1,6 @@
 const throttle = (cb, delay) => {
   let timer = null;
+  // throttle flag
   let throttle = false;
   return () => {
     if (!throttle) {
